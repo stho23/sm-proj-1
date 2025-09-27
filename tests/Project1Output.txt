@@ -1,0 +1,196 @@
+Vehicle Management System is running.
+
+a - invalid command!
+b - invalid command!
+c - invalid command!
+d - invalid command!
+r - invalid command!
+pf - invalid command!
+pr - invalid command!
+pd - invalid command!
+pt - invalid command!
+There is no vehicle in the fleet.
+There is no booking record.
+There is no booking record.
+There is no archived trips.
+0/19/2000 - invalid calendar date.
+13/19/2000 - invalid calendar date.
+2/29/1999 - invalid calendar date.
+6/31/2000 - invalid calendar date.
+8/32/2000 - invalid calendar date.
+8/0/2000 - invalid calendar date.
+11/10/2025 - is today or a future date.
+food - invalid make.
+0 - invalid mileage.
+-1 - invalid mileage.
+58718D:FORD:2/29/2020 [mileage:64390] has been added to the fleet.
+58719D:TOYOTA:1/31/2017 [mileage:87120] has been added to the fleet.
+34123X:HONDA:3/29/2010 [mileage:51010] has been added to the fleet.
+34448X:FORD:4/2/2023 [mileage:19880] has been added to the fleet.
+67155S:CHEVY:3/1/2010 [mileage:101230] has been added to the fleet.
+67156S:FORD:12/12/2012 [mileage:84390] has been added to the fleet.
+36349X:HONDA:5/5/2015 [mileage:76123] has been added to the fleet.
+50805D:FORD:10/16/2016 [mileage:47798] has been added to the fleet.
+57373D:FORD:11/8/2012 [mileage:121305] has been added to the fleet.
+47990S:HONDA:7/29/2024 [mileage:6250] has been added to the fleet.
+51401D:TOYOTA:6/30/2021 [mileage:59978] has been added to the fleet.
+51393D:CHEVY:6/1/2022 [mileage:42100] has been added to the fleet.
+50682D:CHEVY:8/18/2020 [mileage:67200] has been added to the fleet.
+57707D:CHEVY:4/6/2020 [mileage:65512] has been added to the fleet.
+71707X:TOYOTA:9/29/2011 [mileage:120120] has been added to the fleet.
+52103D:HONDA:4/30/2010 [mileage:150111] has been added to the fleet.
+80671S:HONDA:9/9/2022 [mileage:33220] has been added to the fleet.
+67359S:FORD:11/1/2019 [mileage:59644] has been added to the fleet.
+23499X:CHEVY:6/13/2023 [mileage:19666] has been added to the fleet.
+00109X:TOYOTA:7/31/2025 [mileage:1230] has been added to the fleet.
+58718D:FORD:2/29/2020 [mileage:64390] has been removed from the fleet.
+*List of vehicles in the fleet, ordered by make and date obtained.
+67155S:CHEVY:3/1/2010 [mileage:101230]
+57707D:CHEVY:4/6/2020 [mileage:65512]
+50682D:CHEVY:8/18/2020 [mileage:67200]
+51393D:CHEVY:6/1/2022 [mileage:42100]
+23499X:CHEVY:6/13/2023 [mileage:19666]
+57373D:FORD:11/8/2012 [mileage:121305]
+67156S:FORD:12/12/2012 [mileage:84390]
+50805D:FORD:10/16/2016 [mileage:47798]
+67359S:FORD:11/1/2019 [mileage:59644]
+34448X:FORD:4/2/2023 [mileage:19880]
+34123X:HONDA:3/29/2010 [mileage:51010]
+52103D:HONDA:4/30/2010 [mileage:150111]
+36349X:HONDA:5/5/2015 [mileage:76123]
+80671S:HONDA:9/9/2022 [mileage:33220]
+47990S:HONDA:7/29/2024 [mileage:6250]
+71707X:TOYOTA:9/29/2011 [mileage:120120]
+58719D:TOYOTA:1/31/2017 [mileage:87120]
+51401D:TOYOTA:6/30/2021 [mileage:59978]
+00109X:TOYOTA:7/31/2025 [mileage:1230]
+*end of list.
+
+58718D is not in the fleet.
+58718D:FORD:2/29/2020 [mileage:64390] has been added to the fleet.
+7/31/2025 - beginning date is not today or a future date.
+10/32/2025 - beginning date is not a valid calendar date.
+10/16/2025 - ending date must be equal or after the beginning date 10/30/2025
+13/16/2025 - ending date is not a valid calendar date.
+11/0/2025 - ending date is not a valid calendar date.
+1/7/2026 - beginning date beyond 3 months.
+10/26/2025 ~ 11/2/2025 - duration more than a week.
+58719X is not in the fleet.
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/26/2025 ending 11/1/2025:LIM] booked.
+58719D - booking with 10/27/2025 ~ 10/27/2025 not available.
+Andrew - not an eligible employee to book.
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/25/2025 ending 10/25/2025:KAUR] booked.
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/17/2025 ending 10/17/2025:LIM] booked.
+LIM - has an existing booking conflicting with the beginning date 10/27/2025
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/23/2025 ending 10/23/2025:TAYLOR] booked.
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 11/21/2025 ending 11/25/2025:HARPER] booked.
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/15/2025 ending 10/15/2025:HARPER] booked.
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 11/3/2025 ending 11/3/2025:PATEL] booked.
+34123X:HONDA:3/29/2010 [mileage:51010] [beginning 11/3/2025 ending 11/3/2025:CERAVOLO] booked.
+CERAVOLO - has an existing booking conflicting with the beginning date 11/3/2025
+71707X:TOYOTA:9/29/2011 [mileage:120120] [beginning 11/3/2025 ending 11/3/2025:RAMESH] booked.
+52103D:HONDA:4/30/2010 [mileage:150111] [beginning 11/10/2025 ending 11/11/2025:CERAVOLO] booked.
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 11/3/2025 ending 11/5/2025:ZIMNES] booked.
+80671S - booking with 10/31/2025 ~ 11/3/2025 not available.
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 10/31/2025 ending 11/2/2025:CERAVOLO] booked.
+67359S:FORD:11/1/2019 [mileage:59644] [beginning 10/31/2025 ending 11/2/2025:ZIMNES] booked.
+67359S - booking with 10/31/2025 ~ 11/2/2025 not available.
+23499X:CHEVY:6/13/2023 [mileage:19666] [beginning 10/19/2025 ending 10/19/2025:CERAVOLO] booked.
+00109X:TOYOTA:7/31/2025 [mileage:1230] [beginning 10/18/2025 ending 10/18/2025:KAUR] booked.
+*List of reservations ordered by license plate number and beginning date.
+00109X:TOYOTA:7/31/2025 [mileage:1230] [beginning 10/18/2025 ending 10/18/2025:KAUR]
+23499X:CHEVY:6/13/2023 [mileage:19666] [beginning 10/19/2025 ending 10/19/2025:CERAVOLO]
+34123X:HONDA:3/29/2010 [mileage:51010] [beginning 11/3/2025 ending 11/3/2025:CERAVOLO]
+52103D:HONDA:4/30/2010 [mileage:150111] [beginning 11/10/2025 ending 11/11/2025:CERAVOLO]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/15/2025 ending 10/15/2025:HARPER]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/23/2025 ending 10/23/2025:TAYLOR]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/25/2025 ending 10/25/2025:KAUR]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 11/3/2025 ending 11/3/2025:PATEL]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 11/21/2025 ending 11/25/2025:HARPER]
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/17/2025 ending 10/17/2025:LIM]
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/26/2025 ending 11/1/2025:LIM]
+67359S:FORD:11/1/2019 [mileage:59644] [beginning 10/31/2025 ending 11/2/2025:ZIMNES]
+71707X:TOYOTA:9/29/2011 [mileage:120120] [beginning 11/3/2025 ending 11/3/2025:RAMESH]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 10/31/2025 ending 11/2/2025:CERAVOLO]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 11/3/2025 ending 11/5/2025:ZIMNES]
+*end of list.
+
+*List of reservations ordered by department and employee.
+--Business Analytics and Information Technology--
+23499X:CHEVY:6/13/2023 [mileage:19666] [beginning 10/19/2025 ending 10/19/2025:CERAVOLO]
+34123X:HONDA:3/29/2010 [mileage:51010] [beginning 11/3/2025 ending 11/3/2025:CERAVOLO]
+52103D:HONDA:4/30/2010 [mileage:150111] [beginning 11/10/2025 ending 11/11/2025:CERAVOLO]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 10/31/2025 ending 11/2/2025:CERAVOLO]
+--Computer Science--
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 11/3/2025 ending 11/3/2025:PATEL]
+67359S:FORD:11/1/2019 [mileage:59644] [beginning 10/31/2025 ending 11/2/2025:ZIMNES]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 11/3/2025 ending 11/5/2025:ZIMNES]
+--Electrical Engineering--
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/15/2025 ending 10/15/2025:HARPER]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 11/21/2025 ending 11/25/2025:HARPER]
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/17/2025 ending 10/17/2025:LIM]
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/26/2025 ending 11/1/2025:LIM]
+--Information Technology and Informatics--
+00109X:TOYOTA:7/31/2025 [mileage:1230] [beginning 10/18/2025 ending 10/18/2025:KAUR]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/25/2025 ending 10/25/2025:KAUR]
+--Mathematics--
+71707X:TOYOTA:9/29/2011 [mileage:120120] [beginning 11/3/2025 ending 11/3/2025:RAMESH]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/23/2025 ending 10/23/2025:TAYLOR]
+*end of list.
+
+58718D:11/1/2025 ~ 11/1/2025 - cannot find the booking.
+58718D:11/21/2025 ~ 11/25/2025 has been canceled.
+*List of reservations ordered by license plate number and beginning date.
+00109X:TOYOTA:7/31/2025 [mileage:1230] [beginning 10/18/2025 ending 10/18/2025:KAUR]
+23499X:CHEVY:6/13/2023 [mileage:19666] [beginning 10/19/2025 ending 10/19/2025:CERAVOLO]
+34123X:HONDA:3/29/2010 [mileage:51010] [beginning 11/3/2025 ending 11/3/2025:CERAVOLO]
+52103D:HONDA:4/30/2010 [mileage:150111] [beginning 11/10/2025 ending 11/11/2025:CERAVOLO]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/15/2025 ending 10/15/2025:HARPER]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/23/2025 ending 10/23/2025:TAYLOR]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 10/25/2025 ending 10/25/2025:KAUR]
+58718D:FORD:2/29/2020 [mileage:64390] [beginning 11/3/2025 ending 11/3/2025:PATEL]
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/17/2025 ending 10/17/2025:LIM]
+58719D:TOYOTA:1/31/2017 [mileage:87120] [beginning 10/26/2025 ending 11/1/2025:LIM]
+67359S:FORD:11/1/2019 [mileage:59644] [beginning 10/31/2025 ending 11/2/2025:ZIMNES]
+71707X:TOYOTA:9/29/2011 [mileage:120120] [beginning 11/3/2025 ending 11/3/2025:RAMESH]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 10/31/2025 ending 11/2/2025:CERAVOLO]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 11/3/2025 ending 11/5/2025:ZIMNES]
+*end of list.
+
+58718D booked with ending date 10/14/2025 - cannot find the booking.
+58718D booked with ending date 10/23/2025 - returning not in order of ending date.
+Invalid mileage - current mileage: 64390 entered mileage: 64389
+0 - invalid mileage.
+-1 - invalid mileage.
+Trip completed: 58718D 10/15/2025 ~ 10/15/2025 original mileage: 64390 current mileage: 64591 mileage used: 201
+Invalid mileage - current mileage: 87120 entered mileage: 87000
+Trip completed: 58719D 10/17/2025 ~ 10/17/2025 original mileage: 87120 current mileage: 87220 mileage used: 100
+58719D booked with ending date 10/17/2025 - cannot find the booking.
+Trip completed: 00109X 10/18/2025 ~ 10/18/2025 original mileage: 1230 current mileage: 1500 mileage used: 270
+Trip completed: 23499X 10/19/2025 ~ 10/19/2025 original mileage: 19666 current mileage: 20001 mileage used: 335
+Trip completed: 58718D 10/23/2025 ~ 10/23/2025 original mileage: 64591 current mileage: 64999 mileage used: 408
+Trip completed: 58718D 10/25/2025 ~ 10/25/2025 original mileage: 64999 current mileage: 65203 mileage used: 204
+58719D - has existing bookings; cannot be removed.
+*List of reservations ordered by license plate number and beginning date.
+34123X:HONDA:3/29/2010 [mileage:51010] [beginning 11/3/2025 ending 11/3/2025:CERAVOLO]
+52103D:HONDA:4/30/2010 [mileage:150111] [beginning 11/10/2025 ending 11/11/2025:CERAVOLO]
+58718D:FORD:2/29/2020 [mileage:65203] [beginning 11/3/2025 ending 11/3/2025:PATEL]
+58719D:TOYOTA:1/31/2017 [mileage:87220] [beginning 10/26/2025 ending 11/1/2025:LIM]
+67359S:FORD:11/1/2019 [mileage:59644] [beginning 10/31/2025 ending 11/2/2025:ZIMNES]
+71707X:TOYOTA:9/29/2011 [mileage:120120] [beginning 11/3/2025 ending 11/3/2025:RAMESH]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 10/31/2025 ending 11/2/2025:CERAVOLO]
+80671S:HONDA:9/9/2022 [mileage:33220] [beginning 11/3/2025 ending 11/5/2025:ZIMNES]
+*end of list.
+
+*List of completed trips ordered by ending date.
+58718D 10/15/2025 ~ 10/15/2025 original mileage: 64390 current mileage: 64591 mileage used: 201
+58719D 10/17/2025 ~ 10/17/2025 original mileage: 87120 current mileage: 87220 mileage used: 100
+00109X 10/18/2025 ~ 10/18/2025 original mileage: 1230 current mileage: 1500 mileage used: 270
+23499X 10/19/2025 ~ 10/19/2025 original mileage: 19666 current mileage: 20001 mileage used: 335
+58718D 10/23/2025 ~ 10/23/2025 original mileage: 64591 current mileage: 64999 mileage used: 408
+58718D 10/25/2025 ~ 10/25/2025 original mileage: 64999 current mileage: 65203 mileage used: 204
+*end of list.
+
+q - invalid command!
+
+Vehicle Management System is terminated.
