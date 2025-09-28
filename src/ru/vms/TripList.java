@@ -2,7 +2,8 @@ package ru.vms;
 
 /**
  * Circular linked list of trips; prints ordered by ending date.
- * Authors: Reeham Anwar, Simeon Thomas
+ * @author Simeon Thomas
+ * @author Reeham Anwar
  */
 public class TripList {
     private static class Node {
@@ -10,8 +11,12 @@ public class TripList {
         Node next;
         Node(Trip t) { this.data = t; }
     }
-    private Node last; // the reference to the last node of the linked list.
+    private Node last;
 
+    /**
+     * Adds a completed trip to the circular linked list.
+     * @param t the trip to add
+     */
     public void add(Trip t) {
         Node n = new Node(t);
         if (last == null) {
@@ -24,18 +29,19 @@ public class TripList {
         }
     }
 
+    /**
+     * Prints all completed trips ordered by the booking end date.
+     * If there are no trips, prints the required message.
+     */
     public void print() {
         if (last == null) {
             System.out.println("There is no archived trips.");
             return;
         }
-        // count
         int count = 0;
         for (Node p = last.next; ; p = p.next) { count++; if (p == last) break; }
-        // copy to array
         Trip[] arr = new Trip[count];
         int i = 0; for (Node p = last.next; ; p = p.next) { arr[i++] = p.data; if (p == last) break; }
-        // insertion sort by booking end date
         for (int k = 1; k < arr.length; k++) {
             Trip key = arr[k];
             int j = k - 1;

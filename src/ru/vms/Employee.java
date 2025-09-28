@@ -22,10 +22,18 @@ public enum Employee {
 
     private final Department dept;
 
+    /**
+     * Constructs an employee with the given department.
+     * @param dept the department associated with the employee
+     */
     Employee(Department dept) {
         this.dept = dept;
     }
 
+    /**
+     * Gets the department associated with this employee.
+     * @return the department
+     */
     public Department getDepartment() {
         return dept;
     }

@@ -15,10 +15,18 @@ public enum Department {
 
     private final String displayName;
 
+    /**
+     * Constructs a department with a display name.
+     * @param displayName the department name
+     */
     Department(String displayName) {
         this.displayName = displayName;
     }
 
+    /**
+     * Gets the department name.
+     * @return the display name
+     */
     public String getDisplayName() {
         return displayName;
     }

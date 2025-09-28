@@ -12,27 +12,49 @@ public class Reservation {
     private Booking[] bookings;
     private int size;
 
+    /**
+     * Creates an empty reservation list with the initial capacity.
+     */
     public Reservation() {
         this.bookings = new Booking[CAPACITY];
         this.size = 0;
     }
 
     private int find(Booking b) {
-        for (int i = 0; i < size; i++) if (bookings[i].equals(b)) return i;
+        for (int i = 0; i < size; i++) {
+            if (bookings[i].equals(b)) {
+                return i;
+            }
+        }
         return NOT_FOUND;
+    }
+
+    public int size() {
+        return size;
     }
 
     private void grow() {
         Booking[] n = new Booking[bookings.length + CAPACITY];
-        for (int i = 0; i < size; i++) n[i] = bookings[i];
+        for (int i = 0; i < size; i++) {
+            n[i] = bookings[i];
+        }
         bookings = n;
     }
 
+    /**
+     * Adds a booking to the list, growing the underlying array as needed.
+     * @param b the booking to add
+     */
     public void add(Booking b) {
         if (size == bookings.length) grow();
         bookings[size++] = b;
     }
 
+    /**
+     * Removes the given booking if present by overwriting it with the last element.
+     * Does nothing if the booking is not found.
+     * @param b the booking to remove
+     */
     public void remove(Booking b) {
         int idx = find(b);
         if (idx == NOT_FOUND) return;
@@ -41,18 +63,29 @@ public class Reservation {
         size--;
     }
 
+    /**
+     * Checks whether the given booking exists in the list.
+     * @param b the booking to search for
+     * @return true if found, false otherwise
+     */
     public boolean contains(Booking b) { return find(b) != NOT_FOUND; }
 
-    public int size() { return size; }
-
+    /**
+     * Gets the booking at the given index.
+     * @param i the index in the list (0-based, must be &lt; size)
+     * @return the booking at the index
+     */
     public Booking get(int i) { return bookings[i]; }
 
+    /**
+     * Prints the bookings ordered by license plate, then beginning date.
+     * Prints a standard message if there is no booking.
+     */
     public void printByVehicle() {
         if (size == 0) {
             System.out.println("There is no booking record.");
             return;
         }
-        // sort by plate then beginning date
         for (int i = 1; i < size; i++) {
             Booking key = bookings[i];
             int j = i - 1;
@@ -67,12 +100,15 @@ public class Reservation {
         System.out.println("*end of list.");
     }
 
+    /**
+     * Prints the bookings ordered by department, then by employee.
+     * Prints a standard message if there is no booking.
+     */
     public void printByDept() {
         if (size == 0) {
             System.out.println("There is no booking record.");
             return;
         }
-        // sort by department display name then employee enum name (alphabetical)
         for (int i = 1; i < size; i++) {
             Booking key = bookings[i];
             int j = i - 1;

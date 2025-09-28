@@ -5,14 +5,23 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
- * User interface to process command lines; enforces exact output text/format required by grading.
- * Authors: Reeham Anwar, Simeon Thomas
+ * The Frontend class provides the command-line interface for the Vehicle
+ * Management System. It reads user commands, validates input in the required
+ * left-to-right order, and coordinates actions between the Fleet, Reservation,
+ * and TripList classes.
+ * @author Reeham Anwar
+ * @author Simeon Thomas
  */
 public class Frontend {
     private final Fleet fleet = new Fleet();
     private final Reservation reservations = new Reservation();
     private final TripList trips = new TripList();
 
+    /**
+     * Starts the loop, reading commands from standard input,
+     * printing the system start message, and terminating when 'Q'
+     * is entered. Calls process() for each non-empty command line.
+     */
     public void run() {
         System.out.println("Vehicle Management System is running.");
         Scanner sc = new Scanner(System.in);
@@ -29,6 +38,13 @@ public class Frontend {
         sc.close();
     }
 
+    /**
+     * Processes a single input command line by tokenizing the string,
+     * identifying the command, and invoking the appropriate logic.
+     * All validations are performed in left-to-right order.
+     *
+     * @param line the command line entered by the user
+     */
     private void process(String line) {
         StringTokenizer st = new StringTokenizer(line);
         if (!st.hasMoreTokens()) return;
@@ -49,7 +65,7 @@ public class Frontend {
         }
     }
 
-    // ========== A ==========
+    /** Processes the A command (add vehicle) */
     private void handleAdd(StringTokenizer st) {
         String plate = st.nextToken();
         String obtainedTok = st.nextToken();
@@ -72,8 +88,12 @@ public class Frontend {
         }
         String mileageTok = st.nextToken();
         int mileage;
-        try { mileage = Integer.parseInt(mileageTok); }
-        catch (NumberFormatException e) { System.out.println(mileageTok + " - invalid mileage."); return; }
+        try {
+            mileage = Integer.parseInt(mileageTok);
+        } catch (NumberFormatException e) {
+            System.out.println(mileageTok + " - invalid mileage.");
+            return;
+        }
         if (mileage <= 0) {
             System.out.println(mileageTok + " - invalid mileage.");
             return;
@@ -87,7 +107,7 @@ public class Frontend {
         System.out.println(probe + " has been added to the fleet.");
     }
 
-    // ========== D ==========
+    /** Processes the D command (delete vehicle) */
     private void handleDelete(StringTokenizer st) {
         String plate = st.nextToken();
         Vehicle existing = fleet.getByPlate(plate);
@@ -103,7 +123,7 @@ public class Frontend {
         System.out.println(existing + " has been removed from the fleet.");
     }
 
-    // ========== B ==========
+    /** Processes the B command (book vehicle) */
     private void handleBook(StringTokenizer st) {
         String beginTok = st.nextToken();
         Date begin = Date.fromString(beginTok);
@@ -164,7 +184,7 @@ public class Frontend {
         System.out.println(b + " booked.");
     }
 
-    // ========== C ==========
+    /** Processes the C command (cancel booking) */
     private void handleCancel(StringTokenizer st) {
         String beginTok = st.nextToken();
         String endTok = st.nextToken();
@@ -173,7 +193,7 @@ public class Frontend {
         Date begin = Date.fromString(beginTok);
         Date end = Date.fromString(endTok);
         if (begin == null || end == null || !begin.isValid() || !end.isValid()) {
-            // According to spec, cancellation assumes prior validation at add time; if not found -> cannot find.
+            return;
         }
         Booking b = findBooking(begin, end, plate);
         if (b == null) {
@@ -184,7 +204,7 @@ public class Frontend {
         System.out.println(plate + ":" + beginTok + " ~ " + endTok + " has been canceled.");
     }
 
-    // ========== R ==========
+    /** Processes the R command (return vehicle) */
     private void handleReturn(StringTokenizer st) {
         String endTok = st.nextToken();
         String plate = st.nextToken();
@@ -192,7 +212,7 @@ public class Frontend {
 
         Date end = Date.fromString(endTok);
         if (end == null || !end.isValid()) {
-            // returning assumes valid dates exist in bookings; if not found, we fall through to cannot find.
+            return;
         }
         Booking b = findBookingByEndAndPlate(end, plate);
         if (b == null) {
@@ -231,7 +251,6 @@ public class Frontend {
         System.out.println("Trip completed: " + t);
     }
 
-    // ===== helpers =====
     private boolean isBeforeToday(Date d) {
         Calendar today = Calendar.getInstance();
         Calendar c = toCal(d);
